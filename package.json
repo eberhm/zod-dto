@@ -14,7 +14,8 @@
     "lint": "eslint src/**/*.ts && prettier --check --ignore-unknown .",
     "prepublishOnly": "tsc",
     "test": "jest",
-    "commit": "cz"
+    "commit": "cz",
+    "postinstall": "husky install"
   },
   "peerDependencies": {
     "@nestjs/common": "8.x",
@@ -23,6 +24,11 @@
   },
   "devDependencies": {
     "@nestjs/common": "~10.3.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
     "@types/jest": "~29.5.12",
     "@types/node": "~20.11.20",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
@@ -41,6 +47,9 @@
     "prettier-plugin-organize-imports": "^3.2.4",
     "prettier-plugin-pkg": "^0.18.1",
     "prettier-plugin-sh": "^0.14.0",
+    "semantic-release": "^23.0.2",
+    "semantic-release-conventional-commits": "^3.0.0",
+    "semantic-release-yarn": "^3.0.2",
     "ts-jest": "~29.1.2",
     "typescript": "~5.3.3",
     "zod": "3.22.4"
