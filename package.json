@@ -1,0 +1,44 @@
+{
+  "name": "@eberhm/zod-dto",
+  "version": "0.0.1",
+  "description": "Create DTO classes out of Zod's schema definitions. This is a fork of @abitia/zod-dto for maintenance purposes",
+  "repository": "https://github.com/eberhm/zod-dto",
+  "author": "Eber Herrera",
+  "license": "MIT",
+  "packageManager": "yarn@4.1.0+sha256.81a00df816059803e6b5148acf03ce313cad36b7f6e5af6efa040a15981a6ffb",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write --ignore-unknown .",
+    "lint": "eslint src/**/*.ts && prettier --check --ignore-unknown .",
+    "prepublishOnly": "tsc",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "8.x",
+    "@nestjs/swagger": "5.1.x",
+    "zod": "^3.0.2"
+  },
+  "devDependencies": {
+    "@nestjs/common": "~10.3.3",
+    "@types/jest": "~29.5.12",
+    "@types/node": "~20.11.20",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "~8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^27.9.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "~29.7.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-pkg": "^0.18.1",
+    "prettier-plugin-sh": "^0.14.0",
+    "ts-jest": "~29.1.2",
+    "typescript": "~5.3.3",
+    "zod": "3.22.4"
+  }
+}

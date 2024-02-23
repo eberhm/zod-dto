@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should serialize a complex schema 1`] = `
+{
+  "properties": {
+    "arr": {
+      "items": {
+        "required": true,
+        "type": "string",
+      },
+      "required": true,
+      "type": "array",
+    },
+    "item": {
+      "required": true,
+      "type": "string",
+    },
+    "kekity": {
+      "oneOf": [
+        {
+          "enum": [
+            "kek",
+          ],
+          "required": true,
+          "type": "string",
+        },
+        {
+          "enum": [
+            "topkek",
+          ],
+          "required": true,
+          "type": "string",
+        },
+      ],
+      "required": true,
+    },
+    "obj": {
+      "properties": {
+        "uuid": {
+          "required": true,
+          "type": "string",
+        },
+      },
+      "required": true,
+      "type": "object",
+    },
+    "price": {
+      "required": true,
+      "type": "number",
+    },
+    "testTuple": {
+      "items": {
+        "oneOf": [
+          {
+            "required": true,
+            "type": "string",
+          },
+          {
+            "properties": {
+              "name": {
+                "enum": [
+                  "Rudy",
+                ],
+                "required": true,
+                "type": "string",
+              },
+            },
+            "required": true,
+            "type": "object",
+          },
+          {
+            "items": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "blue",
+                  ],
+                  "required": true,
+                  "type": "string",
+                },
+                {
+                  "enum": [
+                    "red",
+                  ],
+                  "required": true,
+                  "type": "string",
+                },
+              ],
+              "required": true,
+            },
+            "required": true,
+            "type": "array",
+          },
+        ],
+      },
+      "maxItems": 3,
+      "minItems": 3,
+      "required": true,
+      "type": "array",
+    },
+    "type": {
+      "enum": [
+        "buy-it-now",
+        "auctions",
+      ],
+      "required": false,
+      "type": "string",
+    },
+  },
+  "required": true,
+  "type": "object",
+}
+`;
