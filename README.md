@@ -1,3 +1,5 @@
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 # zod-dto
 
 Use [zod v3](https://github.com/colinhacks/zod/tree/v3) schemas to validate requests in Nest.js.
