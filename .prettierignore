@@ -1,0 +1,10 @@
+**/.git
+**/node_modules
+
+# Ignore artifacts:
+dist
+
+# Misc
+.yarn
+.husky/_/*
+CHANGELOG.md

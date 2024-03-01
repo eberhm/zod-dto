@@ -13,7 +13,7 @@ concurrency:
 jobs:
   check-pr:
     runs-on: ubuntu-latest
-    env: 
+    env:
       NODE_AUTH_TOKEN: ${{ github.token }}
 
     steps:
@@ -22,7 +22,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x'
+          node-version: "20.x"
 
       - name: Enable Corepack
         run: corepack enable
@@ -32,11 +32,6 @@ jobs:
 
       - name: Lint
         run: yarn lint
-        
 
       - name: Test
         run: yarn test
-
-      
-        
-      

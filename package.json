@@ -10,12 +10,17 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "commit": "cz",
     "format": "prettier --write --ignore-unknown .",
     "lint": "eslint src/**/*.ts && prettier --check --ignore-unknown .",
+    "postinstall": "husky install",
     "prepublishOnly": "tsc",
-    "test": "jest",
-    "commit": "cz",
-    "postinstall": "husky install"
+    "test": "jest"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "peerDependencies": {
     "@nestjs/common": "8.x",
@@ -58,11 +63,6 @@
   "husky": {
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }

@@ -10,7 +10,7 @@ module.exports = {
     "dist",
     ".husky",
     ".yarn",
-    ".github"
+    ".github",
   ],
   extends: [
     "eslint:recommended",
