@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: read
 
 jobs:
   build:
@@ -24,6 +25,6 @@ jobs:
         run: corepack enable
 
       - run: yarn
-      - run: HUSKY=0 yarn semantic-release
+      - run: HUSKY=0 yarn semantic-release --conventional-prerelease
         env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}

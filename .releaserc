@@ -1,10 +1,17 @@
 {
   "branches": [
-    "publish-package-gh-action"
+    "main",
+    { "name": "publish-package-gh-action", "prerelease": true }
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
-    "@semantic-release/changelog",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "docs/CHANGELOG.md"
+      }
+    ],
     [
       "@semantic-release/npm",
       {
