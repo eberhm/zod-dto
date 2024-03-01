@@ -1,0 +1,28 @@
+name: Publish Package to npmjs
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - run: yarn
+      - run: HUSKY=0 yarn semantic-release --conventional-prerelease
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
