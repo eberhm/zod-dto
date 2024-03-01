@@ -13,6 +13,8 @@ concurrency:
 jobs:
   check-pr:
     runs-on: ubuntu-latest
+    env: 
+      NODE_AUTH_TOKEN: ${{ github.token }}
 
     steps:
       - uses: actions/checkout@v4
@@ -30,9 +32,11 @@ jobs:
 
       - name: Lint
         run: yarn lint
+        
 
       - name: Test
         run: yarn test
+
       
         
       

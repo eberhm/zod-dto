@@ -8,6 +8,9 @@ module.exports = {
     "jest-coverage/",
     "dist/",
     "dist",
+    ".husky",
+    ".yarn",
+    ".github"
   ],
   extends: [
     "eslint:recommended",
