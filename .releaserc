@@ -1,7 +1,6 @@
 {
   "branches": [
-    "main",
-    { "name": "publish-package-gh-action", "prerelease": true }
+    "main"
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
