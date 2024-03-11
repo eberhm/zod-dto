@@ -1,5 +1,9 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+> [!IMPORTANT]
+The following package was originally ported from https://github.com/kbkk/abitia/tree/master/packages/zod-dto due to lack of activity.
+
+
 # zod-dto
 
 Use [zod v3](https://github.com/colinhacks/zod/tree/v3) schemas to validate requests in Nest.js.
@@ -7,14 +11,14 @@ Supports generating OpenApi too!
 
 ## Getting Started
 
-`yarn add @eberhm/zod-dto`
+`yarn add zod-dto`
 
 ### Setup a validation pipe (ZodValidationPipe)
 
 In order to validate incoming requests, the ZodValidationPipe needs to be registered.
 
 ```ts
-import { ZodValidationPipe } from "@eberhm/zod-dto";
+import { ZodValidationPipe } from "zod-dto";
 
 @Controller()
 @UsePipes(ZodValidationPipe)
@@ -70,7 +74,7 @@ Please add **tests** for every new feature.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/kbkk/abitia/tree/master/packages/zod-dto) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/eberhm/master/packages/zod-dto) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
