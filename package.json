@@ -1,6 +1,6 @@
 {
   "name": "zod-dto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create DTO classes out of Zod's schema definitions. This is a fork of @abitia/zod-dto for maintenance purposes",
   "repository": "https://github.com/eberhm/zod-dto",
   "author": "Eber Herrera",
