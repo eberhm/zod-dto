@@ -25,9 +25,8 @@ jobs:
       - name: Enable Corepack
         run: corepack enable
 
-      - run: yarn
-      - run: HUSKY=0 yarn semantic-release --conventional-prerelease
+      - run: npm ci
+      - run: HUSKY=0 npm semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
